@@ -152,7 +152,7 @@
       background-color: #F0F4F8; /* Lighter blue-gray */
       border-radius: 10px;
       overflow: hidden;
-      border-left: 4px solid #8B5A2B; /* Brown accent */
+      border-left: 4px solid #FFD700; /* Yellow accent */
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
     
@@ -289,16 +289,15 @@
   
   <section id="home" class="hero">
     <div class="container">
-      <h1>Building Identity Through Excellence in Education</h1>
-      <p>Tzabra Academy delivers an exceptional education that seamlessly integrates cultural traditions and rigorous academic studies, fostering a vibrant identity and a profound connection to heritage.</p>
-      <a href="#admissions" class="cta-button">Apply Now</a>
-      <a href="#contact" class="secondary-button">Schedule a Tour</a>
+      <h1>Building Identity Through <span class="yellow-accent">Excellence</span> in Education</h1>
+      <p>Tzabra Academy delivers an exceptional education that integrates cultural traditions and rigorous academic studies, fostering a vibrant identity and a profound connection to heritage.</p>
+      <!-- Tour and application buttons removed -->
     </div>
   </section>
   
   <section id="about" class="section">
     <div class="container">
-      <h2>About Tzabra Academy</h2>
+      <h2><span class="yellow-border">About Tzabra Academy</span></h2>
       
       <h3>Our Mission</h3>
       <p>Our mission is to deliver an exceptional education that seamlessly integrates cultural traditions and rigorous academic studies, fostering a vibrant sense of identity and a profound connection to heritage within the Greenwood Village - Lone Tree community.</p>
@@ -328,7 +327,7 @@
   
   <section id="academics" class="section" style="background-color: #E6EDF8;">
     <div class="container">
-      <h2>Academic Excellence</h2>
+      <h2><span class="yellow-border">Academic Excellence</span></h2>
       
       <h3>Dual Curriculum</h3>
       <p>At Tzabra Academy, students receive a comprehensive education that combines rigorous secular studies with a rich Jewish curriculum. Our dual approach ensures students develop strong academic skills while building a deep connection to their Jewish heritage.</p>
@@ -375,7 +374,7 @@
   
   <section id="admissions" class="section">
     <div class="container">
-      <h2>Admissions</h2>
+      <h2><span class="yellow-border">Admissions</span></h2>
       
       <h3>Join Our Community</h3>
       <p>Tzabra Academy welcomes families from across the Denver metro area. We are particularly focused on serving the Greenwood Village and Lone Tree communities, providing a high-quality education option closer to home for many families.</p>
@@ -393,14 +392,14 @@
       </ol>
       
       <div style="text-align: center; margin-top: 40px;">
-        <a href="#contact" class="cta-button">Start Your Application</a>
+        <!-- Application buttons removed -->
       </div>
     </div>
   </section>
   
   <section id="hsep" class="section" style="background-color: #E6EDF8;">
     <div class="container">
-      <h2>Homeschool Enrichment Program</h2>
+      <h2><span class="yellow-border">Homeschool Enrichment Program</span></h2>
       
       <h3>Understanding Homeschool Enrichment</h3>
       <p>The Homeschool Enrichment Program (HSEP) provides supplemental educational funding for homeschooling families and private schools. This innovative approach allows us to offer high-quality Jewish education while reducing costs for families.</p>
@@ -435,7 +434,7 @@
   
   <section id="community" class="section">
     <div class="container">
-      <h2>Our Community</h2>
+      <h2><span class="yellow-border">Our Community</span></h2>
       
       <h3>Community in Denver</h3>
       <p>The Greater Denver area has a diverse population with many families seeking quality educational options. There are significant numbers of children in the South Metro Area looking for educational alternatives. Currently, approximately 80% of students in the area are enrolled in public schools.</p>
@@ -450,19 +449,56 @@
   
   <section id="contact" class="section" style="background-color: #E6EDF8;">
     <div class="container">
-      <h2>Contact Us</h2>
+      <h2><span class="yellow-border">Contact Us</span></h2>
       
-      <div style="text-align: center; max-width: 600px; margin: 0 auto;">
+      <div style="max-width: 800px; margin: 0 auto;">
         <h3>Get in Touch</h3>
-        <p>We're excited to tell you more about Tzabra Academy. Please reach out with any questions about our programs, admissions process, or to schedule a visit.</p>
+        <p>We're excited to tell you more about Tzabra Academy. Please reach out with any questions about our programs, admissions process, or to learn more about our school.</p>
         
-        <p><strong>Email:</strong> info@tzabraacademy.org</p>
-        <p><strong>Phone:</strong> (303) 555-1234</p>
-        <p><strong>Location:</strong> Greenwood Village - Lone Tree Area, Colorado</p>
+        <div class="contact-form" style="margin-top: 40px; background-color: white; padding: 30px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+          <h3 style="text-align: center; margin-top: 0;"><span class="yellow-accent">Send Us a Message</span></h3>
+          
+          <form>
+            <div style="margin-bottom: 20px;">
+              <label for="name" style="display: block; margin-bottom: 5px; font-weight: bold;">Your Name:</label>
+              <input type="text" id="name" name="name" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px;">
+            </div>
+            
+            <div style="margin-bottom: 20px;">
+              <label for="email" style="display: block; margin-bottom: 5px; font-weight: bold;">Email Address:</label>
+              <input type="email" id="email" name="email" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px;">
+            </div>
+            
+            <div style="margin-bottom: 20px;">
+              <label for="phone" style="display: block; margin-bottom: 5px; font-weight: bold;">Phone Number:</label>
+              <input type="tel" id="phone" name="phone" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px;">
+            </div>
+            
+            <div style="margin-bottom: 20px;">
+              <label for="message" style="display: block; margin-bottom: 5px; font-weight: bold;">Your Message:</label>
+              <textarea id="message" name="message" rows="5" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px;"></textarea>
+            </div>
+            
+            <div style="text-align: center;">
+              <button type="submit" style="background-color: #1E3A8A; color: white; border: none; padding: 12px 30px; border-radius: 5px; font-size: 1.1rem; cursor: pointer; border-bottom: 3px solid #FFD700;">Send Message</button>
+            </div>
+          </form>
+        </div>
         
-        <div style="margin-top: 40px;">
-          <a href="mailto:info@tzabraacademy.org" class="cta-button">Email Us</a>
-          <a href="tel:3035551234" class="secondary-button">Call Us</a>
+        <div style="margin-top: 40px; display: flex; flex-wrap: wrap; gap: 30px; justify-content: center;">
+          <div style="flex: 1 1 300px; background-color: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); text-align: center; border-bottom: 3px solid #FFD700;">
+            <h3 style="margin-top: 0;">Contact Information</h3>
+            <p><strong>Email:</strong><br>info@tzabraacademy.org</p>
+            <p><strong>Phone:</strong><br>(303) 555-1234</p>
+            <p><strong>Location:</strong><br>Greenwood Village - Lone Tree Area<br>Colorado</p>
+          </div>
+          
+          <div style="flex: 1 1 300px; background-color: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); text-align: center; border-bottom: 3px solid #FFD700;">
+            <h3 style="margin-top: 0;">Office Hours</h3>
+            <p><strong>Monday - Friday:</strong><br>8:00 AM - 4:00 PM</p>
+            <p><strong>Saturday - Sunday:</strong><br>Closed</p>
+            <p><em>Summer hours may vary</em></p>
+          </div>
         </div>
       </div>
     </div>
@@ -473,7 +509,7 @@
       <div class="footer-content">
         <div class="footer-section">
           <h3>Tzabra Academy</h3>
-          <p>A Private School with Homeschool Enrichment Program serving the Greenwood Village - Lone Tree area.</p>
+          <p>A Private School with a Homeschool Enrichment Program serving the Greenwood Village - Lone Tree area.</p>
         </div>
         
         <div class="footer-section">
