@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tzabra Academy</title>
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    header {
+      background-color: #1E3A8A; /* Deeper blue */
+      color: white;
+      padding: 20px 0;
+    }
+    
+    .logo {
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin: 0;
+    }
+    
+    .tagline {
+      font-style: italic;
+      margin-top: 5px;
+    }
+    
+    nav {
+      background-color: #8B5A2B; /* Warm brown */
+      padding: 10px 0;
+    }
+    
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+    
+    nav ul li {
+      padding: 10px 15px;
+    }
+    
+    nav ul li a {
+      color: #FFF;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+    
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+    
+    .hero {
+      background-color: #E6EDF8; /* Light blue-gray */
+      padding: 60px 0;
+      text-align: center;
+    }
+    
+    .hero h1 {
+      font-size: 2.8rem;
+      margin-bottom: 20px;
+      color: #1E3A8A; /* Deeper blue to match header */
+    }
+    
+    .hero p {
+      font-size: 1.3rem;
+      max-width: 800px;
+      margin: 0 auto 30px auto;
+      line-height: 1.6;
+    }
+    
+    .cta-button {
+      display: inline-block;
+      background-color: #1E3A8A; /* Deeper blue */
+      color: white;
+      padding: 15px 30px;
+      border-radius: 5px;
+      font-size: 1.2rem;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 10px;
+    }
+    
+    .cta-button:hover {
+      background-color: #15296B; /* Even deeper blue */
+    }
+    
+    .secondary-button {
+      display: inline-block;
+      background-color: #8B5A2B; /* Warm brown */
+      color: white;
+      padding: 15px 30px;
+      border-radius: 5px;
+      font-size: 1.2rem;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 10px;
+    }
+    
+    .secondary-button:hover {
+      background-color: #704621; /* Darker brown */
+    }
+    
+    .section {
+      padding: 60px 0;
+    }
+    
+    .section h2 {
+      font-size: 2.2rem;
+      text-align: center;
+      margin-bottom: 40px;
+      color: #1E3A8A; /* Deeper blue */
+    }
+    
+    .section h3 {
+      font-size: 1.7rem;
+      color: #1E3A8A; /* Deeper blue */
+      margin-top: 30px;
+      margin-bottom: 15px;
+    }
+    
+    .section p, .section li {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+    
+    .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+    
+    .card {
+      flex: 1 1 300px;
+      max-width: 350px;
+      background-color: #F0F4F8; /* Lighter blue-gray */
+      border-radius: 10px;
+      overflow: hidden;
+      border-left: 4px solid #8B5A2B; /* Brown accent */
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    
+    .card-image {
+      height: 200px;
+      background-color: #ddd;
+      background-size: cover;
+      background-position: center;
+    }
+    
+    .card-content {
+      padding: 20px;
+    }
+    
+    .card h3 {
+      margin-top: 0;
+      font-size: 1.5rem;
+    }
+    
+    .stats-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      text-align: center;
+      margin: 40px 0;
+    }
+    
+    .stat {
+      flex: 1 1 200px;
+      margin: 20px;
+    }
+    
+    .stat-number {
+      font-size: 3rem;
+      font-weight: bold;
+      color: #1E3A8A; /* Deeper blue */
+      margin-bottom: 10px;
+    }
+    
+    .stat-text {
+      font-size: 1.2rem;
+    }
+    
+    footer {
+      background-color: #1E3A8A; /* Deeper blue */
+      color: white;
+      padding: 40px 0;
+    }
+    
+    .footer-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    
+    .footer-section {
+      flex: 1 1 300px;
+      margin-bottom: 30px;
+    }
+    
+    .footer-section h3 {
+      color: white;
+      margin-top: 0;
+      font-size: 1.4rem;
+    }
+    
+    .footer-section ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    
+    .footer-section ul li {
+      margin-bottom: 10px;
+    }
+    
+    .footer-section a {
+      color: white;
+      text-decoration: none;
+    }
+    
+    .footer-section a:hover {
+      text-decoration: underline;
+    }
+    
+    .copyright {
+      text-align: center;
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.2);
+    }
+    
+    @media (max-width: 768px) {
+      .logo {
+        font-size: 2rem;
+      }
+      
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+      
+      .hero p {
+        font-size: 1.1rem;
+      }
+      
+      .cta-button, .secondary-button {
+        display: block;
+        margin: 10px auto;
+        max-width: 80%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1 class="logo">Tzabra Academy</h1>
+      <p class="tagline">A Private School with Homeschool Enrichment Program</p>
+    </div>
+  </header>
+  
+  <nav>
+    <div class="container">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#academics">Academics</a></li>
+        <li><a href="#admissions">Admissions</a></li>
+        <li><a href="#hsep">Homeschool Enrichment</a></li>
+        <li><a href="#community">Community</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  
+  <section id="home" class="hero">
+    <div class="container">
+      <h1>Building Identity Through Excellence in Education</h1>
+      <p>Tzabra Academy delivers an exceptional education that seamlessly integrates cultural traditions and rigorous academic studies, fostering a vibrant identity and a profound connection to heritage.</p>
+      <a href="#admissions" class="cta-button">Apply Now</a>
+      <a href="#contact" class="secondary-button">Schedule a Tour</a>
+    </div>
+  </section>
+  
+  <section id="about" class="section">
+    <div class="container">
+      <h2>About Tzabra Academy</h2>
+      
+      <h3>Our Mission</h3>
+      <p>Our mission is to deliver an exceptional education that seamlessly integrates cultural traditions and rigorous academic studies, fostering a vibrant sense of identity and a profound connection to heritage within the Greenwood Village - Lone Tree community.</p>
+      
+      <h3>Why Tzabra Academy?</h3>
+      <p>With changing demographics and increasing cultural diversity in Colorado, there is a growing need for educational institutions that help students develop a strong sense of identity and connection to their cultural heritage. Studies show that children who maintain strong cultural connections tend to develop better self-esteem and academic outcomes. This highlights the urgent need for education that strengthens cultural identity, fosters historical awareness, and ensures that future generations remain deeply connected to their heritage.</p>
+      
+      <h3>Our Approach</h3>
+      <p>Our school offers a dual curriculum, combining rigorous academic studies with cultural education. Students learn language, history, values, and traditions to strengthen their identity. To ensure affordability, we participate in a homeschool enrichment program, providing quality education with flexible, cost-effective options.</p>
+      
+      <div class="stats-container">
+        <div class="stat">
+          <div class="stat-number">3.4K</div>
+          <div class="stat-text">Children in the South Metro Area</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number">80%</div>
+          <div class="stat-text">Students enrolled in public schools</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number">25%</div>
+          <div class="stat-text">Tuition reduction through HSEP</div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section id="academics" class="section" style="background-color: #E6EDF8;">
+    <div class="container">
+      <h2>Academic Excellence</h2>
+      
+      <h3>Dual Curriculum</h3>
+      <p>At Tzabra Academy, students receive a comprehensive education that combines rigorous secular studies with a rich Jewish curriculum. Our dual approach ensures students develop strong academic skills while building a deep connection to their Jewish heritage.</p>
+      
+      <div class="card-container">
+        <div class="card">
+          <div class="card-content">
+            <h3>Secular Studies</h3>
+            <ul>
+              <li>Mathematics & Sciences</li>
+              <li>Language Arts & Literature</li>
+              <li>Social Studies & History</li>
+              <li>Arts & Physical Education</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="card">
+          <div class="card-content">
+            <h3>Cultural Studies</h3>
+            <ul>
+              <li>Language Instruction</li>
+              <li>Cultural Texts & Literature</li>
+              <li>History & Traditions</li>
+              <li>Global Cultural Perspectives</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="card">
+          <div class="card-content">
+            <h3>Character Development</h3>
+            <ul>
+              <li>Ethics & Values</li>
+              <li>Community Service</li>
+              <li>Leadership Skills</li>
+              <li>Global Citizenship</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section id="admissions" class="section">
+    <div class="container">
+      <h2>Admissions</h2>
+      
+      <h3>Join Our Community</h3>
+      <p>Tzabra Academy welcomes families from across the Denver metro area. We are particularly focused on serving the Greenwood Village and Lone Tree communities, providing a high-quality education option closer to home for many families.</p>
+      
+      <h3>Tuition & Financial Accessibility</h3>
+      <p>We are committed to making quality education accessible to all families. Our tuition ranges from $10,000-$15,000 per student annually, and families participating in the Homeschool Enrichment Program receive a 25% reduction in tuition costs.</p>
+      
+      <h3>Application Process</h3>
+      <ol>
+        <li>Submit an inquiry form</li>
+        <li>Schedule a campus tour</li>
+        <li>Complete application materials</li>
+        <li>Student assessment & family interview</li>
+        <li>Enrollment decision</li>
+      </ol>
+      
+      <div style="text-align: center; margin-top: 40px;">
+        <a href="#contact" class="cta-button">Start Your Application</a>
+      </div>
+    </div>
+  </section>
+  
+  <section id="hsep" class="section" style="background-color: #E6EDF8;">
+    <div class="container">
+      <h2>Homeschool Enrichment Program</h2>
+      
+      <h3>Understanding Homeschool Enrichment</h3>
+      <p>The Homeschool Enrichment Program (HSEP) provides supplemental educational funding for homeschooling families and private schools. This innovative approach allows us to offer high-quality Jewish education while reducing costs for families.</p>
+      
+      <div class="card-container">
+        <div class="card">
+          <div class="card-content">
+            <h3>Lower Tuition</h3>
+            <p>Families can enroll their children without paying full tuition, regardless of their financial situation. Participating private schools in the homeschool enrichment program are required to deduct 25% off the full tuition.</p>
+          </div>
+        </div>
+        
+        <div class="card">
+          <div class="card-content">
+            <h3>Higher Standard</h3>
+            <p>The program ensures compliance with state-mandated secular education requirements (e.g., 90 hours/semester). Students receive structured instruction in STEM, humanities, and language arts, improving academic rigor.</p>
+          </div>
+        </div>
+        
+        <div class="card">
+          <div class="card-content">
+            <h3>Flexible Education</h3>
+            <p>Parents can decide whether or not to participate in the program. This allows families to customize their child's learning experience by choosing specific subjects or classes.</p>
+          </div>
+        </div>
+      </div>
+      
+      <h3>Legal Considerations</h3>
+      <p>Schools receiving state funding cannot discriminate based on religion in admissions or hiring. A minimum of 90 hours per semester of non-religious studies is required for state funds. HSEP-related funding is projected for July 2026.</p>
+    </div>
+  </section>
+  
+  <section id="community" class="section">
+    <div class="container">
+      <h2>Our Community</h2>
+      
+      <h3>Community in Denver</h3>
+      <p>The Greater Denver area has a diverse population with many families seeking quality educational options. There are significant numbers of children in the South Metro Area looking for educational alternatives. Currently, approximately 80% of students in the area are enrolled in public schools.</p>
+      
+      <h3>Current Education Landscape</h3>
+      <p>There are currently several private schools in the Denver metro area, located 8-11 miles from the Lone Tree-Greenwood Village communities. Tzabra Academy aims to provide a closer option for families in these areas.</p>
+      
+      <h3>Community Events</h3>
+      <p>Throughout the year, Tzabra Academy hosts events that bring together students, families, and the broader community. From seasonal celebrations to educational workshops, our events strengthen community bonds and provide opportunities for shared learning and celebration.</p>
+    </div>
+  </section>
+  
+  <section id="contact" class="section" style="background-color: #E6EDF8;">
+    <div class="container">
+      <h2>Contact Us</h2>
+      
+      <div style="text-align: center; max-width: 600px; margin: 0 auto;">
+        <h3>Get in Touch</h3>
+        <p>We're excited to tell you more about Tzabra Academy. Please reach out with any questions about our programs, admissions process, or to schedule a visit.</p>
+        
+        <p><strong>Email:</strong> info@tzabraacademy.org</p>
+        <p><strong>Phone:</strong> (303) 555-1234</p>
+        <p><strong>Location:</strong> Greenwood Village - Lone Tree Area, Colorado</p>
+        
+        <div style="margin-top: 40px;">
+          <a href="mailto:info@tzabraacademy.org" class="cta-button">Email Us</a>
+          <a href="tel:3035551234" class="secondary-button">Call Us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Tzabra Academy</h3>
+          <p>A Private School with Homeschool Enrichment Program serving the Greenwood Village - Lone Tree area.</p>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#academics">Academics</a></li>
+            <li><a href="#admissions">Admissions</a></li>
+            <li><a href="#hsep">Homeschool Enrichment</a></li>
+            <li><a href="#community">Community</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Connect With Us</h3>
+          <ul>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="copyright">
+        <p>&copy; 2025 Tzabra Academy. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
