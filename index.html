@@ -403,6 +403,9 @@
             overflow: hidden;
             box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
+            position: relative;
+            padding-top: 50px; /* Increased from original */
+            margin-top: 35px;
         }
         
         .card:hover {
@@ -416,12 +419,16 @@
             justify-content: center;
             width: 70px;
             height: 70px;
-            margin: -35px auto 20px;
             background-color: var(--primary-color);
             border-radius: 50%;
             box-shadow: 0 10px 15px -3px rgba(0, 51, 102, 0.5);
             font-size: 2rem;
             color: white;
+            position: absolute; /* Changed from margin-based to absolute positioning */
+            top: -35px;         /* Position it above the card */
+            left: 50%;          /* Center horizontally */
+            transform: translateX(-50%); /* Ensure perfect centering */
+            z-index: 1;
         }
         
         .card:nth-child(2) .card-icon {
